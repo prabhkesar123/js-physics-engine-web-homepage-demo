@@ -1,0 +1,74 @@
+@font-face {
+    font-family: font_kehnde;
+    src: url(Tiny5-Regular.ttf);
+}
+@font-face {
+    font-family: links;
+    src: url(Montserrat-VariableFont_wght.ttf);
+}
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.hd {
+    font-family: font_kehnde;
+    font-size: 122px;
+    animation-name: slideInLeft ;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+
+  }
+.hd{
+    left: 0;
+    line-height: 100px;
+    margin-top: -80px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+.links {
+    font-family: links;
+    margin-top: 335px;
+    font-size: 13px;
+    margin-left: 480px;
+    
+}
+.para1{
+    padding-top: 230px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+}
+.newton,.docs,.down{
+    text-decoration: none;
+    color:black ;
+    position: relative; /* Add this line */
+}
+a::before {
+    background: hsl(45 100% 70%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1; /* Ensures the pseudo-element is behind the link text */
+  }
+  
+   a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+
+  
